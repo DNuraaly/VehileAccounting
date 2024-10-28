@@ -1,0 +1,4 @@
+volumes/*
+logs/nginx/*
+logs/supervisor/*
+mysql/db_test.sql

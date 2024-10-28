@@ -1,0 +1,4 @@
+alias pa="php artisan"
+alias pas="php artisan serve"
+alias pat="php artisan tinker"
+alias logs="tail -n 1000 -f storage/logs/laravel.log"

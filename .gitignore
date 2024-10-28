@@ -21,5 +21,3 @@ yarn-error.log
 /storage/google/*.json
 /storage/apple/*.p8
 /storage/db_backup
-/deployment
-docker-compose.yml
