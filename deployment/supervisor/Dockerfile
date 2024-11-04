@@ -1,4 +1,4 @@
-FROM identifize-backend
+FROM backend
 LABEL authors="DNA"
 
 # Install Supervisor
