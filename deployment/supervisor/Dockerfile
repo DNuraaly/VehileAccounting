@@ -1,5 +1,5 @@
 FROM identifize-backend
-LABEL authors="Doolatbek A."
+LABEL authors="DNA"
 
 # Install Supervisor
 RUN apt-get update \
