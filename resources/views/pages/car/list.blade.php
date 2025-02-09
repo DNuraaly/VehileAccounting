@@ -41,16 +41,18 @@
                     <td>{{ $item['re_registered_at'] }}</td>
                     <td>{{ $item['registration_type'] }}</td>
                     <td>
-                        <a href="{{ route('cars.showHistory', $item['auto_number']) }}" class="btn btn-info btn-sm">Детали</a>
-
+                        <a href="{{ route('cars.showHistory', $item['auto_number']) }}" data-bs-toggle="tooltip" data-bs-placement="top" title="Детали">
+                            <i class="bi bi-eye" style="font-size: 1.5rem;"></i>
+                        </a>
                         @if($item['can_re_registration'])
-                            <button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#reRegisterModal" data-car-id="{{ $item['auto_number'] }}">
-                                Перерегистрировать
-                            </button>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#reRegisterModal" data-car-id="{{ $item['auto_number'] }}" data-bs-toggle="tooltip" data-bs-placement="top" title="Перерегистрировать">
+                                <i class="bi bi-pencil" style="font-size: 1.5rem; color: #ffc107;"></i>
+                            </a>
                         @else
-                            <button class="btn btn-secondary btn-sm" disabled>Перерегистрация недоступна</button>
+                            <i class="bi bi-pencil" style="font-size: 1.5rem; color: #6c757d;" title="Перерегистрация недоступна"></i>
                         @endif
                     </td>
+
                 </tr>
             @endforeach
             </tbody>
@@ -156,5 +158,12 @@
                 });
             }
         });
+
+
+        // Enable tooltips
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
     </script>
 @endsection
