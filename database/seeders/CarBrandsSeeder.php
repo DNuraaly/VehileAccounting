@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\CarBrand;
+use App\Models\Car\CarBrand;
 use Illuminate\Database\Seeder;
 
 class CarBrandsSeeder extends Seeder
